@@ -1,12 +1,22 @@
-# User Management System
+# Red Positive Assignment
 
 This project is a simple user management system built with React and Ant Design. It allows users to view a list of users, delete users, and send emails to selected users.
 
-## Features
+The backend for the project is at : [Backend](https://github.com/Shrey-Raj/crud-users-node.js/tree/master)
 
+# Technology
+- React
+- Tailwind
+- Ant Design
+- Vite
+- Node.js, Express.js
+- MongoDB
+
+## Features
+- Create a User
 - View a list of users with details
-- Delete users
-- Send emails to selected users
+- Delete users , Update User details
+- Send email regarding the data of selected users
 
 ## Getting Started
 

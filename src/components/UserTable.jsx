@@ -183,7 +183,7 @@ const UserTable = () => {
   };
 
   return (
-    <>
+    <div id="viewUsers">
     
     <Flex className='justify-between items-center '>
       <Typography.Title level={3} className='mt-5 text-green-400'>
@@ -244,7 +244,7 @@ const UserTable = () => {
           </Form.Item>
         </Form>
       </Modal>
-    </>
+    </div>
   );
 };
 

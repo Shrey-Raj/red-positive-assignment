@@ -41,7 +41,7 @@ const UserForm = () => {
   const [form] = Form.useForm();
 
   return (
-    <Form form={form} layout="vertical" onFinish={onFinish}>
+    <Form form={form} layout="vertical" onFinish={onFinish} id="addUser">
 
       <Form.Item label="Name" required tooltip="This is a required field" name="name" >
         <Input placeholder="Enter your name" />

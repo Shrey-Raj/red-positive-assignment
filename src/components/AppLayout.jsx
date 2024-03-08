@@ -5,14 +5,26 @@ import UserForm from "./UserForm";
 import UserTable from "./UserTable";
 
 const items = [
-  { key: 1, label: "Add User" },
-  { key: 2, label: "View Users" },
+  { key: 1, label: "Add User", sectionId: "addUser" },
+  { key: 2, label: "View Users", sectionId: "viewUsers" },
 ];
 
 const AppLayout = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const handleMenuSelect = ({ key }) => {
+    // Find the corresponding sectionId based on the selected key
+    const selectedItem = items.find(item => item.key === parseInt(key));
+    if (selectedItem) {
+      const section = document.getElementById(selectedItem.sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <Layout>
       {/* Header Starts  */}
@@ -31,7 +43,8 @@ const AppLayout = () => {
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={["1"]}
-          items={items}
+          items={items.map(item => ({ ...item, key: String(item.key) }))}
+          onSelect={handleMenuSelect}
           style={{
             flex: 1,
             minWidth: 0,
